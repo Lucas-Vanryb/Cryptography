@@ -1,0 +1,45 @@
+{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf540
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 Features :\
+\
+	Actions possibles :\
+		-> G\'e9n\'e9rer une cl\'e9\
+		-> Crypter un message\
+		-> D\'e9crypter un message\
+		-> Cryptanalyser un message\
+		-> Cryptanalyser un message \'e0 clair connu \
+\
+	Codes impl\'e9ment\'e9s :\
+		Cryptanalysables :\
+		-> Rot13\
+		-> Rot47\
+		-> Cesar\
+		-> Vigenere\
+		Non cryptanalysables :\
+		-> Enigma\
+		-> Playfair\
+		-> Beale\
+		-> Wolseley\
+		-> Algorithme fait maison (voir javadoc)\
+		A cl\'e9 publique :\
+		-> RSA\
+		-> Merkle-Hellman\
+\
+	Le syst\'e8me de cl\'e9 publique est parfaitement op\'e9rationnel et int\'e9gr\'e9 dans 	l'ihm.\
+\
+	Proc\'e9dure pour ajouter un code :\
+	Cr\'e9er une classe dans le paquet codage impl\'e9mentant ICode et h\'e9ritant de 	Code. Si le code est cryptanalysable, la classe doit impl\'e9menter 	ICodeCryptanalysable. Si le Code est \'e0 cl\'e9 publique, la classe doit h\'e9riter de 	CodeClePublique et non de Code, et doit impl\'e9menter ICodeCl\'e9Publique.\
+	Compl\'e9ter les m\'e9thodes en r\'e9glant this.time au temps en ms qu'a pris 	l'op\'e9ration.\
+	Ajouter dans l'Enum CODES situ\'e9 dans Interface votre nouveau code, en lui 	donnant un identifiant entier unique et en compl\'e9tant creerCode(). Puis, 	compl\'e9ter la m\'e9thode identifierCode() d'Interface.\
+	Le reste est automatique.\
+\
+	IHM : \
+	-> Contient barre de menus adaptables \'e0 la plate-forme d'ex\'e9cution\
+	-> Contient AboutBox\
+	-> Peut fonctionner selon deux modes, le mode utilisateurs (Alice/Bob/Eve) 	ou le mode r\'e9el (toutes les actions sont disponibles)\
+\
+Toutes les exceptions devraient \'eatre catch\'e9es (ou du moins la grande majorit\'e9)}

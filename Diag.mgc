@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="codage.Outils" x="385" y="327">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="codage.ICode" x="377" y="23">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="ecriture.Ecriture" x="1220" y="145">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="ecriture.IEcriture"/>
+        <Communication destinationClassName="codage.IMessageCode"/>
+    </Class>
+    <Class name="codage.Code" x="378" y="207">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="codage.ICode"/>
+    </Class>
+    <Class name="message.IMessage" x="1881" y="25">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="codage.Caesar" x="1787" y="496">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="codage.ICode"/>
+        <Extension destinationClassName="codage.Code"/>
+        <Communication destinationClassName="codage.Outils"/>
+        <Communication destinationClassName="message.IMessage"/>
+        <Communication destinationClassName="fabrique.Fabrique"/>
+    </Class>
+    <Class name="codage.MerkleHellman" x="1119" y="729">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="codage.ICodeClePublique"/>
+        <Extension destinationClassName="codage.CodeClePublique"/>
+        <Communication destinationClassName="codage.Outils"/>
+        <Communication destinationClassName="message.IMessage"/>
+        <Communication destinationClassName="codage.CodeClePublique"/>
+        <Communication destinationClassName="fabrique.Fabrique"/>
+    </Class>
+    <Class name="codage.CodeClePublique" x="1002" y="491">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="codage.ICodeClePublique"/>
+        <Extension destinationClassName="codage.Code"/>
+    </Class>
+    <Class name="codage.RSA" x="840" y="730">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="codage.ICodeClePublique"/>
+        <Extension destinationClassName="codage.CodeClePublique"/>
+        <Communication destinationClassName="codage.Outils"/>
+        <Communication destinationClassName="message.IMessage"/>
+        <Communication destinationClassName="codage.CodeClePublique"/>
+        <Communication destinationClassName="fabrique.Fabrique"/>
+    </Class>
+    <Class name="codage.Rot47" x="464" y="494">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="codage.ICode"/>
+        <Extension destinationClassName="codage.Code"/>
+        <Communication destinationClassName="codage.Outils"/>
+        <Communication destinationClassName="message.IMessage"/>
+        <Communication destinationClassName="fabrique.Fabrique"/>
+    </Class>
+    <Class name="codage.Interface" x="210" y="315">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="codage.ICode"/>
+        <Communication destinationClassName="codage.Interface.CODES"/>
+        <Communication destinationClassName="codage.IMessageCode"/>
+        <Communication destinationClassName="fabrique.Fabrique"/>
+    </Class>
+    <Class name="codage.Rot13" x="736" y="493">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="codage.ICode"/>
+        <Extension destinationClassName="codage.Code"/>
+        <Communication destinationClassName="codage.Outils"/>
+        <Communication destinationClassName="message.IMessage"/>
+        <Communication destinationClassName="fabrique.Fabrique"/>
+    </Class>
+    <Class name="lecture.LectureMessage" x="1737" y="150">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="lecture.ILectureMessage"/>
+        <Association destinationClassName="message.IMessage"
+            endpointName="m" kind="Simple"/>
+        <Communication destinationClassName="fabrique.Fabrique"/>
+    </Class>
+    <Class name="codage.Beale" x="199" y="494">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="codage.ICode"/>
+        <Extension destinationClassName="codage.Code"/>
+        <Communication destinationClassName="message.IMessage"/>
+        <Communication destinationClassName="fabrique.Fabrique"/>
+    </Class>
+    <Class name="ecriture.Ecrire" x="1457" y="147">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="ecriture.Ecriture"/>
+    </Class>
+    <Class name="lecture.ILectureClef" x="1648" y="24">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="codage.Vigenere" x="1269" y="493">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="codage.Code"/>
+        <Communication destinationClassName="message.IMessage"/>
+        <Communication destinationClassName="fabrique.Fabrique"/>
+    </Class>
+    <Class name="codage.Playfair" x="1527" y="494">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="codage.ICode"/>
+        <Extension destinationClassName="codage.Code"/>
+        <Communication destinationClassName="message.IMessage"/>
+        <Communication destinationClassName="fabrique.Fabrique"/>
+    </Class>
+    <Class name="ecriture.IEcriture" x="1223" y="24">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="fabrique.Fabrique" x="1553" y="24">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="lecture.LectureClef" x="1650" y="149">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="lecture.ILectureClef"/>
+        <Association destinationClassName="codage.Interface.CODES"
+            endpointName="typeCode" kind="Simple"/>
+        <Communication destinationClassName="codage.Interface.CODES"/>
+    </Class>
+    <Class name="codage.MessageCode" x="42" y="313">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="codage.IMessageCode"/>
+        <Association destinationClassName="message.IMessage"
+            endpointName="clair" kind="Simple"/>
+        <Association destinationClassName="codage.ICode"
+            endpointName="code" kind="Simple"/>
+        <Association destinationClassName="message.IMessage"
+            endpointName="crypte" kind="Simple"/>
+        <Communication destinationClassName="codage.ICode"/>
+    </Class>
+    <Class name="codage.ICodeClePublique" x="675" y="209">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="codage.ICode"/>
+    </Class>
+    <Class name="codage.Interface.CODES" x="964" y="24">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="lecture.ILectureMessage" x="1731" y="25">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="message.Message" x="1876" y="195">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="message.IMessage"/>
+        <Communication destinationClassName="message.IMessage"/>
+    </Class>
+    <Class name="codage.IMessageCode" x="42" y="22">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+</ClassDiagram>
